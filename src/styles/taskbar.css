@@ -1,0 +1,145 @@
+.taskbar {
+  height: 50px;
+  background-color: var(--secondary-black);
+  border-top: 2px solid var(--kali-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-shadow: 0 -2px 10px rgba(0, 255, 65, 0.1);
+  position: relative;
+  z-index: 999;
+}
+
+.taskbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 1px solid var(--kali-green);
+  background-color: var(--dark-gray);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.menu-button:hover {
+  background-color: var(--kali-green);
+  color: var(--primary-black);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.app-menu {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--kali-green);
+  border-radius: 2px;
+  min-width: 200px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
+  z-index: 1001;
+}
+
+.app-menu-header {
+  padding: 10px;
+  border-bottom: 1px solid var(--kali-green);
+  color: var(--kali-green);
+  font-weight: bold;
+}
+
+.app-menu-item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+  transition: all 0.2s;
+}
+
+.app-menu-item:hover {
+  background-color: rgba(0, 255, 65, 0.1);
+  color: var(--kali-green);
+  padding-left: 15px;
+}
+
+.app-icon {
+  font-size: 18px;
+  min-width: 20px;
+}
+
+.app-name {
+  flex: 1;
+}
+
+.taskbar-center {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.taskbar-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--text-secondary);
+  border-radius: 2px;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.taskbar-item:hover {
+  border-color: var(--kali-green);
+  background-color: rgba(0, 255, 65, 0.05);
+}
+
+.taskbar-item.active {
+  border-color: var(--kali-green);
+  background-color: rgba(0, 255, 65, 0.15);
+  color: var(--kali-green);
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}
+
+.taskbar-icon {
+  font-size: 16px;
+}
+
+.taskbar-label {
+  font-size: 12px;
+}
+
+.taskbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.system-tray {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.clock {
+  font-family: 'Courier New', monospace;
+  color: var(--kali-green);
+  font-weight: bold;
+}
