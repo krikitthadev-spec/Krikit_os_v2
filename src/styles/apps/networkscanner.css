@@ -1,0 +1,131 @@
+.network-scanner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-black);
+  padding: 20px;
+}
+
+.scanner-header {
+  font-size: 18px;
+  color: var(--kali-green);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.scanner-input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: var(--secondary-black);
+  padding: 15px;
+  border: 1px solid var(--kali-green);
+  border-radius: 2px;
+}
+
+.scanner-input-area label {
+  display: flex;
+  align-items: center;
+  color: var(--kali-cyan);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.scanner-input {
+  flex: 1;
+  padding: 8px;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--kali-green);
+  color: var(--text-primary);
+  border-radius: 2px;
+}
+
+.scanner-btn {
+  padding: 8px 16px;
+  background-color: var(--kali-green);
+  color: var(--primary-black);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.scanner-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.scanner-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.scanner-results {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.scanner-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+}
+
+.results-table {
+  border: 1px solid var(--kali-green);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.results-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  background-color: rgba(0, 255, 65, 0.1);
+  border-bottom: 1px solid var(--kali-green);
+  padding: 10px;
+  font-weight: bold;
+  color: var(--kali-green);
+  font-size: 12px;
+}
+
+.results-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+  color: var(--text-primary);
+  font-size: 12px;
+}
+
+.results-row:hover {
+  background-color: rgba(0, 255, 65, 0.05);
+}
+
+.col-ip {
+  color: var(--kali-cyan);
+  font-weight: bold;
+}
+
+.col-hostname {
+  color: var(--text-primary);
+}
+
+.col-status {
+  font-weight: bold;
+}
+
+.col-status.up {
+  color: var(--kali-green);
+}
+
+.col-status.down {
+  color: #ff6666;
+}
+
+.col-ports {
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
