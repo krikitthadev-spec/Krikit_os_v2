@@ -1,0 +1,68 @@
+.terminal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-black);
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.terminal-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: var(--primary-black);
+}
+
+.terminal-line {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.terminal-line.system {
+  color: var(--kali-cyan);
+}
+
+.terminal-line.input {
+  color: var(--kali-green);
+}
+
+.terminal-line.output {
+  color: var(--text-primary);
+}
+
+.terminal-line.error {
+  color: #ff6666;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-top: 1px solid var(--kali-green);
+  background-color: var(--secondary-black);
+}
+
+.terminal-prompt {
+  color: var(--kali-green);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 0;
+}
+
+.terminal-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
