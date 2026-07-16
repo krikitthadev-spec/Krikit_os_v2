@@ -1,0 +1,108 @@
+.file-manager {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-black);
+}
+
+.fm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--secondary-black);
+  border-bottom: 1px solid var(--kali-green);
+}
+
+.fm-btn {
+  padding: 6px 12px;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--kali-green);
+  color: var(--kali-green);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fm-btn:hover {
+  background-color: var(--kali-green);
+  color: var(--primary-black);
+}
+
+.fm-path {
+  flex: 1;
+  padding: 6px 10px;
+  background-color: var(--dark-gray);
+  border: 1px solid var(--kali-green);
+  border-radius: 2px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fm-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.fm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.fm-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.fm-item:hover {
+  background-color: rgba(0, 255, 65, 0.05);
+  border-color: var(--kali-green);
+}
+
+.fm-item.selected {
+  background-color: rgba(0, 255, 65, 0.15);
+  border-color: var(--kali-cyan);
+}
+
+.fm-icon {
+  font-size: 32px;
+}
+
+.fm-name {
+  text-align: center;
+  font-size: 12px;
+  word-break: break-word;
+  color: var(--text-primary);
+}
+
+.fm-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+}
+
+.fm-status {
+  height: 25px;
+  padding: 0 10px;
+  background-color: var(--secondary-black);
+  border-top: 1px solid var(--kali-green);
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
